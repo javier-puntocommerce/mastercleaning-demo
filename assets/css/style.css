@@ -790,7 +790,7 @@ p {
 .navbar-area .navbar .navbar-toggler .toggler-icon {
   width: 30px;
   height: 2px;
-  background-color: #121212;
+  background-color: #fff;
   margin: 5px 0;
   display: block;
   position: relative;
@@ -868,7 +868,7 @@ p {
   line-height: 24px;
   font-weight: 700;
   padding: 11px 16px;
-  color: #fff;
+  color: #000;
   text-transform: uppercase;
   position: relative;
   border-radius: 5px;
@@ -893,6 +893,11 @@ p {
     display: block;
     border: 0;
     margin: 0;
+  }
+}
+@media (min-width: 1300px) {
+  .navbar-area .navbar .navbar-nav .nav-item a {
+    color: #fff;
   }
 }
 .navbar-area .navbar .navbar-nav .nav-item a::before {
@@ -1369,7 +1374,7 @@ p {
 
 /*===== SLIDER ONE =====*/
 .slider-area {
-  padding-top: 94px;
+  padding-top: 79px;
 }
 .slider-area .bd-example .carousel .carousel-inner {
   background-color: #007074;
@@ -1415,7 +1420,7 @@ p {
   .carousel-item
   .carousel-caption
   .carousel-title {
-  font-size: 44px;
+  font-size: 55px;
   font-weight: 700;
   color: #fff;
   line-height: 55px;
@@ -3006,5 +3011,62 @@ p {
   color: #121212;
   background-color: #007074;
 }
+
+/* Shine */
+
+.shine {
+  display: block;
+  position: absolute;
+  background-image: url(/assets/images/glitter.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  overflow: hidden;
+  z-index: 2;
+  opacity: 0;
+  width: 130px;
+  height: 130px;
+  -webkit-animation: glitter 6s linear 0s infinite normal;
+  animation: glitter 6s linear 0s infinite normal;
+  text-indent: -9999px;
+}
+
+.shine {
+  position: absolute;
+  top: -30%;
+  left: -8%;
+  pointer-events: none;
+}
+
+@media (max-width: 750px) {
+  .shine {
+    left: -14%;
+  }
+}
+
+@keyframes glitter {
+  from {
+    -webkit-transform: scale(0.3) rotate(0deg);
+    transform: scale(0.3) rotate(0deg);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: scale(1) rotate(360deg);
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(0.3) rotate(720deg);
+    transform: scale(0.3) rotate(720deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(0.3) rotate(0deg);
+    transform: scale(0.3) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+/* End Shine*/
 
 /*# sourceMappingURL=style.css.map */
